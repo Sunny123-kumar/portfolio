@@ -1,107 +1,42 @@
-import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { profile } from '../data/content'
 import Button from '../components/Button'
 import { GithubIcon, LinkedinIcon } from '../components/SocialIcons'
 
-const typedLines = [
-  { type: 'comment', text: '// API Documentation' },
-  { type: 'method', text: 'GET /users' },
-  { type: 'key', text: 'Request' },
-  { type: 'key', text: 'Response' },
-  { type: 'status', text: '200 OK' },
-]
-
-function DocPreviewCard() {
-  const [visibleCount, setVisibleCount] = useState(0)
-
-  useEffect(() => {
-    if (visibleCount >= typedLines.length) return undefined
-    const timer = setTimeout(() => setVisibleCount((c) => c + 1), 700)
-    return () => clearTimeout(timer)
-  }, [visibleCount])
-
-  useEffect(() => {
-    if (visibleCount < typedLines.length) return undefined
-    const reset = setTimeout(() => setVisibleCount(0), 2800)
-    return () => clearTimeout(reset)
-  }, [visibleCount])
-
+function PortraitCard() {
   return (
-    <div
-      className="relative overflow-hidden rounded-xl border border-border bg-surface-elevated shadow-[0_20px_50px_-24px_rgba(28,25,23,0.35)]"
-      aria-hidden="true"
-    >
-      <div className="flex items-center gap-2 border-b border-border px-4 py-3">
-        <span className="h-2.5 w-2.5 rounded-full bg-stone-300 dark:bg-stone-600" />
-        <span className="h-2.5 w-2.5 rounded-full bg-stone-300 dark:bg-stone-600" />
-        <span className="h-2.5 w-2.5 rounded-full bg-stone-300 dark:bg-stone-600" />
-        <span className="ml-2 font-mono text-xs text-ink-subtle">
-          api-docs.md
-        </span>
-      </div>
+    <figure className="relative mx-auto w-full max-w-md lg:ml-auto lg:mr-0">
+      <div
+        className="absolute -inset-3 -z-10 rounded-2xl bg-accent-soft/50 blur-2xl dark:bg-accent-soft/25"
+        aria-hidden="true"
+      />
 
-      <div className="grid gap-0 md:grid-cols-[140px_1fr]">
-        <aside className="hidden border-r border-border bg-surface p-4 md:block">
-          <p className="mb-3 font-mono text-[10px] tracking-wider text-ink-subtle uppercase">
-            Docs
-          </p>
-          <ul className="space-y-2 font-mono text-xs text-ink-muted">
-            <li className="text-accent">Overview</li>
-            <li>Auth</li>
-            <li>Endpoints</li>
-            <li>Schemas</li>
-          </ul>
-        </aside>
-
-        <div className="space-y-4 p-5 sm:p-6">
-          <div>
-            <p className="font-mono text-xs tracking-wider text-accent uppercase">
-              API Documentation
-            </p>
-            <h3 className="mt-2 font-display text-xl font-semibold text-ink">
-              Users Resource
-            </h3>
-          </div>
-
-          <div className="min-h-[148px] rounded-lg border border-border bg-code-bg p-4 font-mono text-xs sm:text-sm">
-            {typedLines.slice(0, visibleCount).map((line, i) => (
-              <motion.p
-                key={`${line.text}-${i}`}
-                initial={{ opacity: 0, x: -6 }}
-                animate={{ opacity: 1, x: 0 }}
-                className={
-                  line.type === 'comment'
-                    ? 'text-stone-500'
-                    : line.type === 'method'
-                      ? 'text-teal-300'
-                      : line.type === 'status'
-                        ? 'text-emerald-400'
-                        : 'text-stone-300'
-                }
-              >
-                {line.text}
-                {i === visibleCount - 1 ? (
-                  <span className="ml-0.5 inline-block h-3.5 w-1.5 animate-pulse bg-teal-300 align-middle" />
-                ) : null}
-              </motion.p>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            <span className="rounded border border-border px-2 py-1 font-mono text-[10px] text-ink-muted">
-              OpenAPI
-            </span>
-            <span className="rounded border border-border px-2 py-1 font-mono text-[10px] text-ink-muted">
-              Swagger
-            </span>
-            <span className="rounded border border-border px-2 py-1 font-mono text-[10px] text-ink-muted">
-              REST
-            </span>
-          </div>
+      <div className="overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-[0_24px_60px_-28px_rgba(28,25,23,0.45)]">
+        <div className="aspect-[4/5] overflow-hidden bg-stone-950">
+          <img
+            src="/images/sunny-kumar.png"
+            alt="Sunny Kumar — Technical Content Writer and Documentation Specialist"
+            className="h-full w-full object-cover object-top"
+            width={640}
+            height={800}
+            decoding="async"
+            fetchPriority="high"
+          />
         </div>
+
+        <figcaption className="border-t border-border bg-surface-elevated px-5 py-4 sm:px-6 sm:py-5">
+          <p className="font-display text-xl font-semibold tracking-tight text-ink sm:text-2xl">
+            {profile.name}
+          </p>
+          <p className="mt-1 text-sm leading-snug text-ink-muted sm:text-base">
+            {profile.shortTitle}
+          </p>
+          <p className="mt-2 font-mono text-[11px] tracking-wider text-accent uppercase">
+            MERN Stack Developer
+          </p>
+        </figcaption>
       </div>
-    </div>
+    </figure>
   )
 }
 
@@ -176,8 +111,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="relative"
         >
-          <div className="absolute -inset-4 -z-10 rounded-2xl bg-accent-soft/60 blur-2xl dark:bg-accent-soft/30" />
-          <DocPreviewCard />
+          <PortraitCard />
         </motion.div>
       </div>
     </section>

@@ -129,49 +129,59 @@ export const skillGroups = [
 export const projects = [
   {
     id: '01',
-    title: 'Cross-Border Crypto Payment Docs',
-    category: 'Technical Content & Support',
+    title: 'Cross-Border Crypto Payment Platform',
+    category: 'Technical Writing & Customer Support',
+    role: 'Technical Content Writer',
     description:
-      'User guides and FAQs for a cross-border crypto payment product — explaining USD account setup, funding, and international transfers in plain language without losing technical accuracy.',
+      'Documented a crypto payment product that lets users open a USD account, fund it, and send cryptocurrency to recipients in other countries. The goal was to make a complex financial flow understandable for both first-time users and support teams.',
     highlights: [
-      'Simplified crypto and payment flows for mixed audiences.',
-      'Built FAQ content that reduced repetitive support questions.',
-      'Supported backend technical customer inquiries.',
-      'Investigated reported issues and communicated clear solutions.',
+      'Wrote step-by-step guides for account opening, funding, and cross-border transfers.',
+      'Created FAQs that explained fees, timelines, and common errors in plain language.',
+      'Handled backend-related customer questions and translated technical fixes into clear replies.',
+      'Reviewed reported issues, verified product behavior, and helped close gaps between docs and the live product.',
     ],
-    visual: 'payment',
+    outcome:
+      'Users could complete transfers with less confusion, and support had ready answers for frequent questions.',
   },
   {
     id: '02',
-    title: 'REST API Reference (OpenAPI)',
+    title: 'REST API Documentation (OpenAPI / Swagger)',
     category: 'API Documentation',
+    role: 'API Documentation Specialist',
     description:
-      'OpenAPI/Swagger documentation for REST APIs — endpoints, methods, parameters, authentication, and request/response models structured for fast developer onboarding.',
+      'Built structured API reference documentation so developers could integrate REST endpoints without guessing request formats or auth requirements. Coverage included methods, parameters, authentication, and request/response schemas.',
+    highlights: [
+      'Documented endpoints with HTTP methods, path/query parameters, and auth rules.',
+      'Defined request and response schemas so payload expectations were explicit.',
+      'Organized docs in an OpenAPI/Swagger-friendly structure for maintainability.',
+      'Added examples that helped engineers test calls and debug integrations faster.',
+    ],
     tags: [
       'REST APIs',
       'OpenAPI',
       'Swagger',
-      'Endpoint Docs',
       'Authentication',
-      'Schemas',
-      'Data Models',
+      'Request / Response Schemas',
     ],
-    visual: 'api',
+    outcome:
+      'Developers had a single source of truth for integrating and testing the API.',
   },
   {
     id: '03',
-    title: 'Note Maker',
-    category: 'Full Stack Web App',
+    title: 'Note Maker Web Application',
+    category: 'Full Stack Development',
+    role: 'Full Stack Developer',
     technologies: 'Node.js • Express.js • EJS • Tailwind CSS',
     description:
-      'A note-taking web app built end to end — demonstrating routing, server-side rendering, and clean frontend–backend data flow.',
+      'Designed and built a note-taking web app from scratch to practice real full-stack workflows — server routes, templates, and UI — instead of only writing about them.',
     highlights: [
-      'Dynamic routing and page flows',
-      'Frontend-to-backend data communication',
-      'RESTful backend routes',
-      'Server-side application structure',
+      'Implemented dynamic routes for creating, viewing, and managing notes.',
+      'Connected the frontend form actions to Express backend handlers.',
+      'Used EJS templates for server-side rendered pages.',
+      'Styled a clean, responsive interface with Tailwind CSS.',
     ],
-    visual: 'notes',
+    outcome:
+      'A working note app that demonstrates end-to-end web development and documentation-ready code structure.',
   },
 ]
 
