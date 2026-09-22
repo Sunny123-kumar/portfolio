@@ -1,13 +1,16 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { navLinks, profile } from '../data/content'
 import { useScrolled } from '../hooks/useScrolled'
+import { useActiveSection } from '../hooks/useActiveSection'
 import ThemeToggle from './ThemeToggle'
 
 export default function Navbar({ theme, onToggleTheme }) {
   const scrolled = useScrolled()
   const [open, setOpen] = useState(false)
+  const sectionIds = useMemo(() => navLinks.map((link) => link.id), [])
+  const activeId = useActiveSection(sectionIds)
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
@@ -20,6 +23,24 @@ export default function Navbar({ theme, onToggleTheme }) {
     setOpen(false)
     const el = document.getElementById(id)
     if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const linkClass = (id, mobile = false) => {
+    const isActive = activeId === id
+    if (mobile) {
+      return [
+        'focus-ring block rounded-md px-3 py-3 text-base font-medium transition',
+        isActive
+          ? 'bg-accent-soft text-accent-ink'
+          : 'text-ink hover:bg-accent-soft hover:text-accent-ink',
+      ].join(' ')
+    }
+    return [
+      'focus-ring rounded-md px-3 py-2 text-sm font-medium transition',
+      isActive
+        ? 'bg-accent-soft text-accent'
+        : 'text-ink-muted hover:text-accent',
+    ].join(' ')
   }
 
   return (
@@ -55,7 +76,8 @@ export default function Navbar({ theme, onToggleTheme }) {
                   e.preventDefault()
                   handleNav(link.id)
                 }}
-                className="focus-ring rounded-md px-3 py-2 text-sm font-medium text-ink-muted transition hover:text-accent"
+                className={linkClass(link.id)}
+                aria-current={activeId === link.id ? 'page' : undefined}
               >
                 {link.label}
               </a>
@@ -65,17 +87,6 @@ export default function Navbar({ theme, onToggleTheme }) {
 
         <div className="flex items-center gap-2">
           <ThemeToggle theme={theme} onToggle={onToggleTheme} />
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault()
-              handleNav('contact')
-            }}
-            className="focus-ring hidden items-center justify-center rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent-hover sm:inline-flex dark:text-stone-950"
-            aria-label="Let's Talk — go to contact section"
-          >
-            Let&apos;s Talk
-          </a>
           <button
             type="button"
             className="focus-ring inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-surface-elevated text-ink lg:hidden"
@@ -106,24 +117,13 @@ export default function Navbar({ theme, onToggleTheme }) {
                       e.preventDefault()
                       handleNav(link.id)
                     }}
-                    className="focus-ring block rounded-md px-3 py-3 text-base font-medium text-ink hover:bg-accent-soft hover:text-accent-ink"
+                    className={linkClass(link.id, true)}
+                    aria-current={activeId === link.id ? 'page' : undefined}
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
-              <li className="pt-2">
-                <a
-                  href="#contact"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    handleNav('contact')
-                  }}
-                  className="focus-ring flex w-full items-center justify-center rounded-md bg-accent px-4 py-3 text-sm font-semibold text-white dark:text-stone-950"
-                >
-                  Let&apos;s Talk
-                </a>
-              </li>
             </ul>
           </motion.div>
         ) : null}

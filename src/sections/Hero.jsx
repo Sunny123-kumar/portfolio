@@ -142,9 +142,9 @@ export default function Hero() {
             <Button
               href="#contact"
               variant="secondary"
-              ariaLabel="Contact me — go to contact section"
+              ariaLabel="Go to contact details"
             >
-              Contact Me
+              Get in Touch
             </Button>
           </div>
 

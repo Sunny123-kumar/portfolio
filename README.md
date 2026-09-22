@@ -64,9 +64,9 @@ Edit `src/data/content.js` to update profile details, experience, skills, projec
 - GitHub: https://github.com/Sunny123-kumar
 - LinkedIn: https://www.linkedin.com/in/sunny-kumar-b69081286
 
-## Contact form
+## Contact
 
-The contact form opens the visitor’s email app via `mailto:` with the subject and message prefilled. You can later swap this for EmailJS, Formspree, Resend, or a backend API in `src/sections/Contact.jsx` inside `handleSubmit`.
+The contact section lists email, phone, GitHub, and LinkedIn — no inquiry form.
 
 ## License
 
