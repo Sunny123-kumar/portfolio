@@ -30,11 +30,10 @@ export default function Footer() {
           </a>
           <a
             href={profile.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
             className="focus-ring inline-flex items-center gap-2 text-sm font-medium text-ink-muted transition hover:text-accent"
-            aria-label="LinkedIn profile (placeholder)"
-            onClick={(e) => {
-              if (profile.linkedin === '#') e.preventDefault()
-            }}
+            aria-label="LinkedIn profile"
           >
             <LinkedinIcon size={16} />
             LinkedIn

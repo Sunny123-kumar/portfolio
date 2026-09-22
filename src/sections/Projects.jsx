@@ -74,8 +74,8 @@ export default function Projects() {
         <ScrollReveal>
           <SectionHeading
             eyebrow="Selected work"
-            title="Featured Work"
-            description="Documentation, API references, and full-stack work that sits between products, developers, and users."
+            title="Work that builds trust"
+            description="Documentation, API references, and full-stack projects designed to help users succeed and teams ship with confidence."
           />
         </ScrollReveal>
 

@@ -1,23 +1,23 @@
 export const profile = {
   name: 'Sunny Kumar',
   title:
-    'Technical Content Writer | Technical Documentation Specialist | MERN Stack Developer',
+    'Technical Content Writer | Documentation Specialist | MERN Stack Developer',
   shortTitle: 'Technical Content Writer & Documentation Specialist',
   email: 'krsunny432@gmail.com',
-  phone: '6230372574',
-  phoneDisplay: '6230372574',
-  github: 'https://github.com/krsunny432',
-  githubLabel: 'github.com/krsunny432',
-  linkedin: '#',
-  linkedinLabel: 'LinkedIn (coming soon)',
-  heroLabel: 'TECHNICAL CONTENT WRITER • DEVELOPER DOCUMENTATION • MERN',
-  heroHeadline: 'I turn complex technology into clear, useful documentation.',
+  phone: '+916230372574',
+  phoneDisplay: '+91 62303 72574',
+  github: 'https://github.com/Sunny123-kumar',
+  githubLabel: 'github.com/Sunny123-kumar',
+  linkedin: 'https://www.linkedin.com/in/sunny-kumar-b69081286',
+  linkedinLabel: 'linkedin.com/in/sunny-kumar-b69081286',
+  heroLabel: 'TECHNICAL WRITING • API DOCS • MERN',
+  heroHeadline: 'Clear documentation that helps products ship and users succeed.',
   heroDescription:
-    'Technical Content Writer and MERN Stack Developer focused on developer documentation, API documentation, technical research, and simplifying complex software concepts.',
+    'I help teams turn complex software, APIs, and workflows into documentation developers and customers can trust — accurate, structured, and easy to follow.',
   summary: [
-    'Detail-oriented Technical Content Writer with 6 months of professional experience at Anodoc Technologies. I create clear, accurate, developer-focused technical content and specialize in researching complex technical concepts and converting them into easy-to-understand articles, tutorials, guides, API documentation, and FAQs.',
-    'I have hands-on experience with OpenAPI/Swagger documentation, endpoint documentation, request/response schemas, technical research, content structuring, editing, and proofreading — plus a technical foundation in JavaScript, HTML, CSS, React.js, Node.js, Express.js, and MongoDB.',
-    'As a BCA graduate, I am especially interested in developer documentation, web technologies, APIs, SaaS, and technology-focused content — working between developers, products, APIs, and users.',
+    'Technical Content Writer with professional experience at Anodoc Technologies, specializing in developer documentation, API references, tutorials, and product guides. I research complex systems and translate them into content that is accurate, scannable, and useful for the people who need it.',
+    'My work spans OpenAPI/Swagger documentation, endpoint specs, request/response schemas, technical research, editing, and proofreading — backed by hands-on MERN stack skills in JavaScript, React.js, Node.js, Express.js, and MongoDB.',
+    'As a BCA graduate, I sit between engineering and users: I understand the product deeply enough to explain it clearly, and I write with the structure and polish that companies, SaaS teams, and clients expect.',
   ],
 }
 
@@ -34,9 +34,9 @@ export const navLinks = [
 export const technicalProfile = [
   '6 Months Professional Experience',
   'BCA Graduate',
-  'Technical Writing',
+  'Developer Documentation',
   'API Documentation',
-  'MERN Stack',
+  'MERN Stack Foundation',
   'OpenAPI / Swagger',
 ]
 
@@ -53,13 +53,13 @@ export const experience = {
   role: 'Technical Content Writer',
   duration: '6 Months',
   responsibilities: [
-    'Created clear, accurate, and developer-focused technical content covering software and web technology topics.',
-    'Researched complex technical concepts and converted them into easy-to-understand articles, tutorials, guides, and documentation.',
-    'Wrote and edited technical content while maintaining clarity, accuracy, consistency, and professional tone.',
-    'Collaborated with technical teams to understand product features, workflows, and technical requirements.',
-    'Structured content using headings, subheadings, examples, lists, and step-by-step explanations.',
-    'Reviewed content for grammar, technical accuracy, formatting, and consistency.',
-    'Researched modern web technologies and industry trends to produce relevant technical content.',
+    'Produced developer-focused articles, tutorials, guides, and documentation for software and web technology products.',
+    'Researched complex features and workflows, then turned them into clear, step-by-step content for technical and non-technical readers.',
+    'Authored and maintained OpenAPI/Swagger-style API documentation covering endpoints, authentication, parameters, and request/response schemas.',
+    'Partnered with engineering and product teams to validate accuracy, capture edge cases, and keep docs aligned with shipping features.',
+    'Structured content for skimmability — headings, examples, lists, and procedures that reduce support questions.',
+    'Edited for grammar, consistency, tone, and technical correctness before publish.',
+    'Tracked web technology trends so content stayed relevant to modern SaaS and API products.',
   ],
 }
 
@@ -72,7 +72,7 @@ export const skillGroups = [
       'Developer Guides',
       'Tutorials',
       'API Documentation',
-      'Content Research',
+      'FAQs & Help Content',
       'Editing & Proofreading',
     ],
   },
@@ -82,7 +82,7 @@ export const skillGroups = [
     skills: [
       'OpenAPI',
       'Swagger',
-      'API Endpoints',
+      'REST Endpoints',
       'HTTP Methods',
       'Parameters',
       'Authentication',
@@ -111,7 +111,7 @@ export const skillGroups = [
   {
     title: 'Tools',
     icon: 'tools',
-    skills: ['Git', 'GitHub'],
+    skills: ['Git', 'GitHub', 'Markdown'],
   },
   {
     title: 'Additional',
@@ -119,8 +119,8 @@ export const skillGroups = [
     skills: [
       'Technical Research',
       'Content Structuring',
-      'Simplifying Complex Concepts',
-      'Documentation',
+      'Audience-First Writing',
+      'Documentation Strategy',
       'Web Development Fundamentals',
     ],
   },
@@ -129,48 +129,47 @@ export const skillGroups = [
 export const projects = [
   {
     id: '01',
-    title: 'Cross-Border Crypto Payment App',
-    category: 'Technical Content & Documentation',
+    title: 'Cross-Border Crypto Payment Docs',
+    category: 'Technical Content & Support',
     description:
-      'Technical articles and FAQs explaining how users open a USD account and use it to send cryptocurrency to recipients in other countries, covering account setup, funding, and cross-border transfer workflows.',
+      'User guides and FAQs for a cross-border crypto payment product — explaining USD account setup, funding, and international transfers in plain language without losing technical accuracy.',
     highlights: [
-      'Simplified complex crypto and cross-border payment concepts.',
-      'Created user-friendly guides for technical and non-technical audiences.',
-      'Developed and maintained FAQ content.',
-      'Provided backend technical customer support.',
-      'Investigated reported issues and communicated technical solutions.',
+      'Simplified crypto and payment flows for mixed audiences.',
+      'Built FAQ content that reduced repetitive support questions.',
+      'Supported backend technical customer inquiries.',
+      'Investigated reported issues and communicated clear solutions.',
     ],
     visual: 'payment',
   },
   {
     id: '02',
-    title: 'Open API Documentation',
+    title: 'REST API Reference (OpenAPI)',
     category: 'API Documentation',
     description:
-      'OpenAPI/Swagger documentation for REST APIs, covering endpoints, methods, parameters, authentication details, request schemas, and response schemas.',
+      'OpenAPI/Swagger documentation for REST APIs — endpoints, methods, parameters, authentication, and request/response models structured for fast developer onboarding.',
     tags: [
       'REST APIs',
       'OpenAPI',
       'Swagger',
-      'Endpoint Documentation',
+      'Endpoint Docs',
       'Authentication',
-      'Request/Response Models',
-      'Data Structures',
+      'Schemas',
+      'Data Models',
     ],
     visual: 'api',
   },
   {
     id: '03',
     title: 'Note Maker',
-    category: 'Full Stack Web Application',
+    category: 'Full Stack Web App',
     technologies: 'Node.js • Express.js • EJS • Tailwind CSS',
     description:
-      'Developed a note-making application using Node.js, Express.js, EJS, and Tailwind CSS.',
+      'A note-taking web app built end to end — demonstrating routing, server-side rendering, and clean frontend–backend data flow.',
     highlights: [
-      'Dynamic routing',
+      'Dynamic routing and page flows',
       'Frontend-to-backend data communication',
-      'Backend routes',
-      'Server-side application functionality',
+      'RESTful backend routes',
+      'Server-side application structure',
     ],
     visual: 'notes',
   },
@@ -180,36 +179,39 @@ export const writingProcess = [
   {
     step: '01',
     title: 'Research',
-    description: 'Understand the technology and gather accurate information.',
+    description:
+      'Study the product, APIs, and source material until the facts are solid.',
   },
   {
     step: '02',
     title: 'Understand',
     description:
-      'Break down the technical workflow and identify the target audience.',
+      'Map the workflow and define who will read the docs — and what they need to do.',
   },
   {
     step: '03',
     title: 'Structure',
-    description: 'Organize information into logical sections.',
+    description:
+      'Organize content into a logical information architecture before drafting.',
   },
   {
     step: '04',
     title: 'Simplify',
-    description: 'Convert complex concepts into clear explanations.',
+    description:
+      'Rewrite complex ideas into clear language without losing precision.',
   },
   {
     step: '05',
     title: 'Document',
     description:
-      'Create accurate, readable, and maintainable documentation.',
+      'Ship accurate, maintainable docs with examples teams can trust.',
   },
 ]
 
 export const education = [
   {
     title: 'Bachelor of Computer Applications (BCA)',
-    institution: 'HPU University',
+    institution: 'Himachal Pradesh University (HPU)',
     period: 'September 2021 – June 2024',
     detail: 'CGPA: 7.92',
   },
@@ -237,8 +239,8 @@ export const training = [
   },
   {
     title: 'AutoCAD Certification',
-    institution: null,
-    highlights: [],
+    institution: 'Certified program',
+    highlights: ['Technical drawing', 'CAD fundamentals'],
   },
 ]
 
@@ -255,7 +257,7 @@ export const docsSidebar = [
 export const docsExample = {
   method: 'GET',
   path: '/api/users',
-  description: 'Retrieve user information.',
+  description: 'Retrieve a paginated list of users.',
   parameters: [
     { name: 'page', type: 'integer', description: 'Page number for pagination' },
     { name: 'limit', type: 'integer', description: 'Number of results per page' },

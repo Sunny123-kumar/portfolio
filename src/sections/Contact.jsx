@@ -24,7 +24,11 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // UI-only for now — ready for email service integration (e.g. EmailJS, Formspree, API route)
+    const subject = encodeURIComponent(form.subject.trim())
+    const body = encodeURIComponent(
+      `Hi Sunny,\n\n${form.message.trim()}\n\n— ${form.name.trim()}\n${form.email.trim()}`,
+    )
+    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
     setSubmitted(true)
     setForm(initialForm)
   }
@@ -38,8 +42,8 @@ export default function Contact() {
         <ScrollReveal>
           <SectionHeading
             eyebrow="Contact"
-            title="Let's Build Better Technical Experiences"
-            description="Have a product, API, documentation project, or technical content requirement? Let's connect."
+            title="Let's work together"
+            description="Looking for API docs, developer guides, or technical content for your product? Reach out — I respond quickly."
           />
         </ScrollReveal>
 
@@ -70,7 +74,7 @@ export default function Contact() {
                 label="LinkedIn"
                 value={profile.linkedinLabel}
                 href={profile.linkedin}
-                placeholder
+                external
               />
             </div>
           </ScrollReveal>
@@ -135,17 +139,16 @@ export default function Contact() {
               </label>
 
               <div className="mt-5 flex flex-wrap items-center gap-3">
-                <Button type="submit" ariaLabel="Send message">
+                <Button type="submit" ariaLabel="Send message via email">
                   Send Message
                 </Button>
                 {submitted ? (
                   <p className="text-sm text-ink-muted" role="status">
-                    Thanks — form is UI-ready. Connect an email service to
-                    deliver messages.
+                    Opening your email app — thanks for reaching out.
                   </p>
                 ) : (
                   <p className="text-xs text-ink-subtle">
-                    Form UI only until an email service is connected.
+                    Opens your email app with the message ready to send.
                   </p>
                 )}
               </div>
@@ -157,15 +160,12 @@ export default function Contact() {
   )
 }
 
-function ContactRow({ icon: Icon, label, value, href, external, placeholder }) {
+function ContactRow({ icon: Icon, label, value, href, external }) {
   return (
     <a
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
-      onClick={(e) => {
-        if (placeholder && href === '#') e.preventDefault()
-      }}
       className="focus-ring flex items-start gap-4 rounded-xl border border-border bg-surface-elevated p-4 transition hover:border-accent/40"
       aria-label={`${label}: ${value}`}
     >

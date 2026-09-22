@@ -160,11 +160,10 @@ export default function Hero() {
             </a>
             <a
               href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
               className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-ink-muted transition hover:border-accent hover:text-accent"
-              aria-label="LinkedIn profile (placeholder until URL is provided)"
-              onClick={(e) => {
-                if (profile.linkedin === '#') e.preventDefault()
-              }}
+              aria-label="Visit Sunny Kumar on LinkedIn"
             >
               <LinkedinIcon size={18} />
             </a>

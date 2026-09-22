@@ -9,8 +9,8 @@ export default function WritingProcess() {
         <ScrollReveal>
           <SectionHeading
             eyebrow="Process"
-            title="How I Approach Technical Writing"
-            description="A repeatable workflow for turning complex systems into documentation people can use."
+            title="How I deliver documentation"
+            description="A clear, repeatable workflow — from research to publish — so your docs stay accurate and useful."
           />
         </ScrollReveal>
 

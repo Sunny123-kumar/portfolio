@@ -7,7 +7,11 @@ export default function About() {
     <section id="about" className="section-pad border-t border-border">
       <div className="container-page">
         <ScrollReveal>
-          <SectionHeading eyebrow="Profile" title="About Me" />
+          <SectionHeading
+            eyebrow="Profile"
+            title="About Me"
+            description="A documentation specialist with a developer’s mindset — focused on clarity, accuracy, and outcomes."
+          />
         </ScrollReveal>
 
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
