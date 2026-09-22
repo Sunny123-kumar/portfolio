@@ -12,13 +12,13 @@ function PortraitCard() {
       />
 
       <div className="overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-[0_24px_60px_-28px_rgba(28,25,23,0.45)]">
-        <div className="aspect-[4/5] overflow-hidden bg-stone-950">
+        <div className="aspect-[4/4.2] max-h-[380px] overflow-hidden bg-stone-950 sm:max-h-[420px]">
           <img
             src="/images/sunny-kumar.png"
             alt="Sunny Kumar — Technical Content Writer and Documentation Specialist"
-            className="h-full w-full object-cover object-top"
+            className="h-full w-full object-cover object-[center_18%]"
             width={640}
-            height={800}
+            height={670}
             decoding="async"
             fetchPriority="high"
           />
